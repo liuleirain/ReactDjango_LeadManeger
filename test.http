@@ -1,0 +1,40 @@
+POST http://127.0.0.1:8000/api/leads/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Sam Smith",
+  "email": "sam@gmail.com",
+  "message": "Please contact Sam"
+}
+
+###
+GET http://127.0.0.1:8000/api/leads/1 HTTP/1.1
+
+
+###
+POST http://127.0.0.1:8000/api/auth/register HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "john1",
+  "email": "jdoe1@gmail.com",
+  "password": "123456"
+}
+
+###
+POST http://127.0.0.1:8000/api/auth/login HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "john",
+  "password": "123456"
+}
+
+###
+GET http://127.0.0.1:8000/api/auth/user HTTP/1.1
+Authorization: token a4973a836e4a05c56e53d12fc4ecedf65d25699db6d4b436c66ca1b0f3fcc300
+
+
+###
+POST http://127.0.0.1:8000/api/auth/logout HTTP/1.1
+Authorization: token 78a8026cfc423bdb648e8dd3becd67c6c8c043fa4b6482746c95f312aa5d7eaa
